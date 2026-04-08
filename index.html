@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>陳賢宗老師</title>
   <meta name="description" content="陳賢宗老師，聚焦自然科探究教學、AI 融入教學、科展指導與創客科技課程。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #07111f;
@@ -554,6 +557,31 @@
       flex-wrap: wrap;
     }
 
+    /* Contact list row separators */
+    .contact-list .row {
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .contact-list .row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    /* Achievement card left accent */
+    .achievement-card {
+      border-left: 3px solid var(--brand);
+      padding-left: 20px;
+    }
+
+    /* Step label pill */
+    .process-card .step {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(103,232,249,0.12);
+      border: 1px solid rgba(103,232,249,0.20);
+    }
+
     @media (max-width: 1080px) {
       .hero-grid,
       .profile-grid,
@@ -624,7 +652,8 @@
           <div class="pill"><span class="dot"></span> Premium Speaker Brand Homepage</div>
           <h1>
             陳賢宗老師
-                     </h1>
+            <span>探究 × AI × 科展</span>
+          </h1>
           <p class="lead">
             把自然課從「做活動」升級成真正有脈絡的科學探究；把 AI 從工具展示，轉化成能支持教學設計、評量與學生思考的實務力量。
           </p>
@@ -793,10 +822,11 @@
       <div class="container host-grid">
         <div>
           <small style="font-weight:900;letter-spacing:0.18em;text-transform:uppercase;display:block;">HOST SCRIPT</small>
-          
+          <h2>主持人介紹稿</h2>
+          <p>接下來為各位介紹今天的講師——陳賢宗老師，目前任職於國立南科國際實驗高級中學。賢宗老師長期深耕自然科學教育，擅長整合探究與實作、AI 融入教學與科展指導，帶來兼具理論高度與課堂可行性的教師增能內容，是結合教育現場與創新設計的實戰派講師。</p>
         </div>
         <aside class="host-side">
-          
+          <strong style="font-size:15px;font-weight:800;color:#082f49;display:block;">擅長講授主題</strong>
           <ul>
             <li>自然科探究教學</li>
             <li>AI 融入教學實務</li>
@@ -810,23 +840,18 @@
     <section id="contact" class="section">
       <div class="container">
         <div class="section-title">
-          <small>PHOTO</small>
-          <h2>教學與研習現場</h2>
-<!-- 
-          <div class="desc">此區可替換成您的研習照片、上課照片、科展指導紀錄或活動海報，提升網站真實感與專業形象。</div>
+          <small>CONTACT</small>
+          <h2>邀課與合作交流</h2>
+          <div class="desc">可依主題需求、時數安排、參與教師背景與學校發展方向進行客製化調整。適合作為校內教師研習、領域對話、教學創新分享或科展指導培力。</div>
         </div>
-        <div class="photo-grid">
-          <div class="photo-placeholder">可放照片 1<br>研習分享 / 教學現場</div>
-          <div class="photo-placeholder">可放照片 2<br>公開授課 / 工作坊</div>
-          <div class="photo-placeholder">可放照片 3<br>科展指導 / 活動成果</div>
-        </div>
--->
-        <div class="contact-grid">
+
+        <div class="contact-grid" style="margin-top:44px;">
           <div>
-            <div class="section-title">
-              <small>BOOKING</small>
-              <h2>歡迎邀課與合作交流</h2>
-              <div class="desc">可依主題需求、時數安排、參與教師背景與學校發展方向進行客製化調整。適合作為校內教師研習、領域對話、教學創新分享或科展指導培力。</div>
+            <p style="font-size:18px;color:var(--muted);margin:0 0 24px;line-height:1.85;">歡迎各校、縣市教育局處與教師社群邀請合作，課程形式與時數皆可彈性討論，歡迎來信或加 LINE 洽詢。</p>
+            <div class="feature-list">
+              <div class="feature-item"><span class="mini-dot"></span><div>適合講座、工作坊與實作分享等多種形式</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>建議時數 1 至 3 小時，可依需求調整</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>內容可依對象、目標與學校特色客製化</div></div>
             </div>
           </div>
 
@@ -837,7 +862,7 @@
               <div class="row"><p>專長領域</p><p>自然科探究教學、AI 融入教學、科展指導、創客科技、生態教育</p></div>
               <div class="row"><p>課程型式</p><p>講座、工作坊、實作分享</p></div>
               <div class="row"><p>建議時數</p><p>1 至 3 小時，可依需求調整</p></div>
-              <div class="row"><p>聯繫方式</p><p>prayer168@gmail.com Line ID : prayer168 。</p></div>
+              <div class="row"><p>聯繫方式</p><p>prayer168@gmail.com<br>Line ID：prayer168</p></div>
             </div>
           </div>
         </div>
