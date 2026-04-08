@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>陳賢宗老師</title>
+  <meta name="description" content="陳賢宗老師，聚焦自然科探究教學、AI 融入教學、科展指導與創客科技課程。" />
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: rgba(255,255,255,0.05);
+      --card: rgba(255,255,255,0.06);
+      --line: rgba(255,255,255,0.10);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --muted-2: #94a3b8;
+      --brand: #34d399;
+      --brand-2: #22d3ee;
+      --brand-3: #60a5fa;
+      --dark: #0f172a;
+      --white: #ffffff;
+      --shadow: 0 30px 100px rgba(0,0,0,0.30);
+      --radius: 28px;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(16,185,129,0.22), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(59,130,246,0.18), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(34,211,238,0.16), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .section { padding: 88px 0; }
+    .glass {
+      background: var(--card);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(52,211,153,0.22);
+      background: rgba(52,211,153,0.10);
+      color: #bbf7d0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--brand);
+      box-shadow: 0 0 14px rgba(52,211,153,0.9);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(7,17,31,0.65);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand-title {
+      font-size: 14px;
+      letter-spacing: 0.22em;
+      font-weight: 800;
+      color: #a7f3d0;
+    }
+    .brand-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-links a {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 14px;
+      color: #e2e8f0;
+      transition: 0.25s ease;
+    }
+    .nav-links a:hover { background: rgba(255,255,255,0.08); }
+    .nav-links a.cta {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #06261e;
+      border: none;
+      font-weight: 800;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 64px 0 72px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.10;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+      background-size: 42px 42px;
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      display: grid;
+      gap: 28px;
+      grid-template-columns: 1.12fr 0.88fr;
+      align-items: center;
+    }
+    .hero h1 {
+      margin: 22px 0 0;
+      font-size: clamp(42px, 8vw, 88px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+    }
+    .hero h1 span {
+      display: block;
+      margin-top: 10px;
+      background: linear-gradient(90deg, #86efac, #67e8f9, #93c5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero p.lead {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 20px;
+      margin: 28px 0 0;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 18px;
+      font-weight: 800;
+      transition: transform .25s ease, background .25s ease, color .25s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--white);
+      color: var(--dark);
+      box-shadow: 0 20px 60px rgba(255,255,255,0.12);
+    }
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      color: var(--white);
+    }
+
+    .stats {
+      margin-top: 36px;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-card {
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(14px);
+    }
+    .stat-card strong {
+      display: block;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--white);
+    }
+    .stat-card span {
+      display: block;
+      margin-top: 6px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .identity {
+      padding: 20px;
+      position: relative;
+    }
+    .identity-inner {
+      padding: 30px;
+      border-radius: 26px;
+      background: linear-gradient(145deg, rgba(15,23,42,0.95), rgba(30,41,59,0.88));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .identity-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .identity-head small {
+      display: block;
+      letter-spacing: 0.18em;
+      color: #a7f3d0;
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .identity-head h2 {
+      margin: 8px 0 0;
+      font-size: 40px;
+      line-height: 1.1;
+    }
+    .badge {
+      padding: 10px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(52,211,153,0.18);
+      background: rgba(52,211,153,0.10);
+      color: #bbf7d0;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .identity p {
+      color: var(--muted);
+      margin: 20px 0 0;
+      font-size: 17px;
+    }
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .feature-item {
+      display: flex;
+      gap: 12px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.05);
+    }
+    .feature-item .mini-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--brand);
+      margin-top: 8px;
+      flex: 0 0 auto;
+    }
+
+    .section-title small,
+    .section-title p.label {
+      color: #86efac;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      font-size: 13px;
+      text-transform: uppercase;
+      display: block;
+    }
+    .section-title h2 {
+      margin: 14px 0 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.08;
+    }
+    .section-title .desc {
+      margin-top: 18px;
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .achievements-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 24px;
+    }
+    .achievement-card {
+      padding: 16px 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      color: #e2e8f0;
+    }
+
+    .profile-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 0.9fr 1.1fr;
+      margin-top: 24px;
+    }
+    .quote-card { padding: 32px; }
+    .quote-box {
+      margin-top: 28px;
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(52,211,153,0.12), rgba(34,211,238,0.08));
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+    .quote-box strong {
+      font-size: 32px;
+      line-height: 1.45;
+      display: block;
+    }
+    .quote-box strong span { color: #86efac; display: block; }
+
+    .process-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .process-card {
+      padding: 24px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      transition: transform .25s ease, background .25s ease;
+    }
+    .process-card:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.08);
+    }
+    .process-card .step {
+      color: #67e8f9;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+    }
+    .process-card h3 {
+      margin: 12px 0 0;
+      font-size: 28px;
+    }
+    .process-card p { margin-top: 12px; color: var(--muted); }
+
+    .light-section {
+      background: #ffffff;
+      color: #0f172a;
+      position: relative;
+      overflow: hidden;
+    }
+    .light-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(16,185,129,0.08), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(59,130,246,0.08), transparent 26%);
+      pointer-events: none;
+    }
+    .light-section .section-title small,
+    .light-section .section-title p.label { color: #047857; }
+    .light-section .section-title .desc { color: #475569; }
+    .topics-grid {
+      position: relative;
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 44px;
+    }
+    .topic-card {
+      position: relative;
+      padding: 28px;
+      border-radius: 30px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      box-shadow: 0 20px 60px rgba(15,23,42,0.08);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 28px 80px rgba(15,23,42,0.14);
+    }
+    .topic-tag {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+    .topic-card h3 {
+      margin: 18px 0 0;
+      font-size: 32px;
+      line-height: 1.16;
+    }
+    .topic-card p {
+      margin: 16px 0 0;
+      color: #475569;
+      font-size: 17px;
+    }
+    .topic-line {
+      margin-top: 22px;
+      width: 84px;
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      transition: width .25s ease;
+    }
+    .topic-card:hover .topic-line { width: 132px; }
+
+    .invite-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1.05fr 0.95fr;
+    }
+    .dark-panel {
+      padding: 32px;
+      border-radius: 32px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: linear-gradient(145deg, #0b1f35, #0a1222);
+      box-shadow: var(--shadow);
+    }
+    .dark-panel h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.1; margin: 14px 0 0; }
+    .dark-panel h2 span { color: #86efac; display: block; }
+    .dark-panel p { color: var(--muted); margin-top: 18px; }
+    .dark-panel .mini-grid,
+    .service-grid {
+      margin-top: 26px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .mini-card,
+    .service-card {
+      padding: 16px 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      color: #e2e8f0;
+    }
+    .service-panel {
+      padding: 32px;
+      border-radius: 32px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .service-panel h2 { margin: 14px 0 0; font-size: clamp(34px, 4vw, 52px); line-height: 1.1; }
+
+    .host-section {
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      color: #082f49;
+    }
+    .host-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+    }
+    .host-section small { color: rgba(8,47,73,0.72); }
+    .host-section h2 { margin: 12px 0 0; font-size: clamp(32px, 4vw, 48px); }
+    .host-section p { font-size: 18px; color: rgba(8,47,73,0.92); }
+    .host-side {
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.70);
+      box-shadow: 0 20px 60px rgba(8,47,73,0.18);
+    }
+    .host-side ul {
+      margin: 16px 0 0;
+      padding-left: 18px;
+    }
+    .host-side li { margin: 10px 0; }
+
+    .photo-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
+    .photo-placeholder {
+      min-height: 220px;
+      border-radius: 24px;
+      border: 1px dashed rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted-2);
+      text-align: center;
+      padding: 16px;
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: start;
+    }
+    .contact-card { padding: 32px; }
+    .contact-list { display: grid; gap: 18px; }
+    .contact-list .row p:first-child {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--muted-2);
+      letter-spacing: .03em;
+    }
+    .contact-list .row p:last-child {
+      margin: 6px 0 0;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.18);
+    }
+    .footer-inner {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--muted-2);
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .profile-grid,
+      .invite-grid,
+      .host-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats,
+      .topics-grid,
+      .process-grid,
+      .dark-panel .mini-grid,
+      .service-grid,
+      .photo-grid,
+      .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .section { padding: 68px 0; }
+      .hero { padding: 40px 0 56px; }
+      .nav { padding: 10px 0; }
+      .nav-links { width: 100%; }
+      .nav-links a { flex: 1 1 calc(50% - 10px); text-align: center; }
+      .stats,
+      .topics-grid,
+      .process-grid,
+      .dark-panel .mini-grid,
+      .service-grid,
+      .photo-grid,
+      .achievements-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero p.lead,
+      .section-title .desc,
+      .host-section p {
+        font-size: 17px;
+      }
+      .identity-head h2,
+      .topic-card h3,
+      .process-card h3 {
+        font-size: 26px;
+      }
+      .quote-box strong { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div>
+        <div class="brand-title">CHEN Hsien Chung</div>
+        <div class="brand-sub">自然科探究教學 × AI 融入 × 科展指導</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#profile">講師定位</a>
+        <a href="#courses">課程主題</a>
+        <a href="#contact" class="cta">邀課資訊</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill"><span class="dot"></span> Premium Speaker Brand Homepage</div>
+          <h1>
+            陳賢宗老師
+                     </h1>
+          <p class="lead">
+            把自然課從「做活動」升級成真正有脈絡的科學探究；把 AI 從工具展示，轉化成能支持教學設計、評量與學生思考的實務力量。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#courses">查看主打課程</a>
+            <a class="btn btn-secondary" href="#profile">認識講師特色</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card"><strong>自然 × AI</strong><span>核心講授主軸</span></div>
+            <div class="stat-card"><strong>講座／工作坊</strong><span>可客製授課形式</span></div>
+            <div class="stat-card"><strong>探究 × 實作</strong><span>教學設計風格</span></div>
+            <div class="stat-card"><strong>校本 × 跨域</strong><span>課程整合特色</span></div>
+          </div>
+        </div>
+
+        <div class="glass identity">
+          <div class="identity-inner">
+            <div class="identity-head">
+              <div>
+                <small>Speaker Identity</small>
+                <h2>探究教學實戰派</h2>
+              </div>
+              <div class="badge">NNKIEH</div>
+            </div>
+            <p>
+              長期投入自然科學教育，擅長整合探究與實作、AI 融入教學、科展指導與創客科技，讓研習內容兼具理念高度與實務落地性。
+            </p>
+            <div class="feature-list">
+              <div class="feature-item"><span class="mini-dot"></span><div>自然科學教育工作者，長期推動探究與實作教學</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>擅長將 AI、創客科技與自然科課程整合</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>具科展指導、教師研習分享與課程設計經驗</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>課程內容重視可帶回教室立即應用的實作策略</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="section">
+      <div class="container">
+        <div class="section-title">
+          <small>PROFILE</small>
+          <h2>講師經歷與亮點</h2>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card">指導學生參與科展與探究競賽並獲佳績</div>
+          <div class="achievement-card">多場教師研習與跨校分享經驗</div>
+          <div class="achievement-card">發展自然 × AI × 探究課程模組</div>
+          <div class="achievement-card">長期推動探究與實作教學</div>
+        </div>
+
+        <div class="profile-grid">
+          <div class="glass quote-card">
+            <div class="section-title">
+              <small>ABOUT</small>
+              <h2>講師品牌定位</h2>
+              <div class="desc">以自然科學教育為核心，延伸至探究教學、AI 融入、科展研究設計與創客科技，打造兼具專業深度、課堂可行性與跨域視野的教師增能內容。</div>
+            </div>
+            <div class="quote-box">
+              <div style="font-size:14px;font-weight:800;color:#bbf7d0;">一句話定位</div>
+              <strong>
+                讓自然課不只是做實驗，
+                <span>而是學會像科學家一樣思考。</span>
+              </strong>
+            </div>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-card">
+              <div class="step">STEP 01</div>
+              <h3>掌握現場需求</h3>
+              <p>依對象、時數與學校目標，調整內容深度與活動結構。</p>
+            </article>
+            <article class="process-card">
+              <div class="step">STEP 02</div>
+              <h3>給出可用模組</h3>
+              <p>不只談理念，更提供可帶回教室的課程模組與案例。</p>
+            </article>
+            <article class="process-card">
+              <div class="step">STEP 03</div>
+              <h3>帶入真實示例</h3>
+              <p>結合教學現場、科展指導與學生作品，提升說服力與可行性。</p>
+            </article>
+            <article class="process-card">
+              <div class="step">STEP 04</div>
+              <h3>促成教學轉化</h3>
+              <p>協助教師把抽象概念變成能立即落地的課堂行動。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section light-section">
+      <div class="container">
+        <div class="section-title">
+          <p class="label">SIGNATURE PROGRAMS</p>
+          <h2>主打講座與工作坊</h2>
+          <div class="desc">可依學校需求、教師背景、時數與主題方向彈性調整，適合校內研習、領域社群、公開授課分享與跨校增能活動。</div>
+        </div>
+
+        <div class="topics-grid">
+          <article class="topic-card">
+            <div class="topic-tag">Inquiry × PBL</div>
+            <h3>探究與實作教學設計</h3>
+            <p>從生活情境出發，帶入提問、假設、實驗設計、數據分析與表達，讓自然課更有深度、更有探究味。</p>
+            <div class="topic-line"></div>
+          </article>
+          <article class="topic-card">
+            <div class="topic-tag">AI in Education</div>
+            <h3>AI 融入自然科教學</h3>
+            <p>結合 AI 工具進行課程設計、評量設計、資料整理與學習支持，提升教師備課效率與學生學習品質。</p>
+            <div class="topic-line"></div>
+          </article>
+          <article class="topic-card">
+            <div class="topic-tag">Science Fair Coaching</div>
+            <h3>科展指導策略</h3>
+            <p>從題目發想、研究設計、變因控制到成果表達，協助老師建立完整而可操作的指導流程。</p>
+            <div class="topic-line"></div>
+          </article>
+          <article class="topic-card">
+            <div class="topic-tag">Maker × Ecology</div>
+            <h3>創客科技 × 生態教育</h3>
+            <p>結合 3D 列印、雷射雕刻與環境議題，發展具探究性與跨域性的校本特色課程。</p>
+            <div class="topic-line"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container invite-grid">
+        <div class="dark-panel">
+          <div class="section-title">
+            <small style="color:#67e8f9;">WHY INVITE</small>
+            <h2>不是只分享觀念，<span>而是帶來可實作的教學轉化</span></h2>
+          </div>
+          <p>從課程起點設計、探究流程安排、學生表達任務到評量工具搭配，協助教師把一場研習真正轉化為教室裡可發生的改變。</p>
+          <div class="mini-grid">
+            <div class="mini-card">直接提供可帶回課堂的模組</div>
+            <div class="mini-card">搭配真實教學與科展案例</div>
+            <div class="mini-card">兼顧理論高度與現場可行性</div>
+            <div class="mini-card">適合自然、跨域與科技整合主題</div>
+          </div>
+        </div>
+
+        <div class="service-panel">
+          <div class="section-title">
+            <small>SERVICE SCENES</small>
+            <h2>適合邀課場景</h2>
+          </div>
+          <div class="service-grid">
+            <div class="service-card">教師研習講座</div>
+            <div class="service-card">校內增能工作坊</div>
+            <div class="service-card">科展指導分享</div>
+            <div class="service-card">自然科課程設計諮詢</div>
+            <div class="service-card">AI 融入教學實務分享</div>
+            <div class="service-card">校本特色課程規劃交流</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section host-section">
+      <div class="container host-grid">
+        <div>
+          <small style="font-weight:900;letter-spacing:0.18em;text-transform:uppercase;display:block;">HOST SCRIPT</small>
+          
+        </div>
+        <aside class="host-side">
+          
+          <ul>
+            <li>自然科探究教學</li>
+            <li>AI 融入教學實務</li>
+            <li>科展題目與研究設計</li>
+            <li>素養導向課程與評量</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-title">
+          <small>PHOTO</small>
+          <h2>教學與研習現場</h2>
+<!-- 
+          <div class="desc">此區可替換成您的研習照片、上課照片、科展指導紀錄或活動海報，提升網站真實感與專業形象。</div>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-placeholder">可放照片 1<br>研習分享 / 教學現場</div>
+          <div class="photo-placeholder">可放照片 2<br>公開授課 / 工作坊</div>
+          <div class="photo-placeholder">可放照片 3<br>科展指導 / 活動成果</div>
+        </div>
+-->
+        <div class="contact-grid">
+          <div>
+            <div class="section-title">
+              <small>BOOKING</small>
+              <h2>歡迎邀課與合作交流</h2>
+              <div class="desc">可依主題需求、時數安排、參與教師背景與學校發展方向進行客製化調整。適合作為校內教師研習、領域對話、教學創新分享或科展指導培力。</div>
+            </div>
+          </div>
+
+          <div class="glass contact-card">
+            <div class="contact-list">
+              <div class="row"><p>講師姓名</p><p>陳賢宗</p></div>
+              <div class="row"><p>任教單位</p><p>國立南科國際實驗高級中學</p></div>
+              <div class="row"><p>專長領域</p><p>自然科探究教學、AI 融入教學、科展指導、創客科技、生態教育</p></div>
+              <div class="row"><p>課程型式</p><p>講座、工作坊、實作分享</p></div>
+              <div class="row"><p>建議時數</p><p>1 至 3 小時，可依需求調整</p></div>
+              <div class="row"><p>聯繫方式</p><p>prayer168@gmail.com Line ID : prayer168 。</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 陳賢宗老師講師品牌首頁</div>
+      <div>Natural Science Education · Inquiry Learning · AI Integration</div>
+    </div>
+  </footer>
+</body>
+</html>
