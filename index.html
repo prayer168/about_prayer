@@ -582,6 +582,171 @@
       border: 1px solid rgba(103,232,249,0.20);
     }
 
+    /* Bio grid */
+    .bio-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 32px;
+    }
+    .bio-card {
+      padding: 24px 26px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+    }
+    .bio-card h4 {
+      margin: 0 0 16px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #86efac;
+      text-transform: uppercase;
+    }
+    .bio-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .bio-card li {
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .bio-card li:last-child { border-bottom: none; }
+
+    /* Tags grid for topics */
+    .tags-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .tag-item {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    .tag-item.outdoor {
+      background: #fffbeb;
+      color: #92400e;
+    }
+    .tags-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .tags-label.indoor {
+      background: #ecfdf5;
+      color: #047857;
+    }
+    .tags-label.outdoor {
+      background: #fffbeb;
+      color: #92400e;
+    }
+
+    /* Club detail cards */
+    .club-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 36px;
+    }
+    details.club-card {
+      border-radius: 28px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      box-shadow: 0 16px 48px rgba(15,23,42,0.08);
+      overflow: hidden;
+    }
+    details.club-card summary {
+      padding: 22px 26px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      user-select: none;
+    }
+    details.club-card summary::-webkit-details-marker { display: none; }
+    details.club-card summary .sum-left { display: flex; flex-direction: column; gap: 8px; }
+    details.club-card summary h3 { margin: 0; font-size: 20px; color: #0f172a; }
+    .sum-arrow {
+      width: 30px; height: 30px;
+      border-radius: 999px;
+      background: #ecfdf5;
+      color: #047857;
+      display: flex; align-items: center; justify-content: center;
+      flex: 0 0 auto;
+      transition: transform .25s ease;
+      font-size: 14px;
+    }
+    details.club-card[open] .sum-arrow { transform: rotate(180deg); }
+    .club-content {
+      padding: 0 26px 24px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .week-grid {
+      display: grid;
+      gap: 8px 16px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 16px;
+    }
+    .week-item {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: #475569;
+      padding: 6px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .week-num {
+      color: #047857;
+      font-weight: 800;
+      white-space: nowrap;
+      flex: 0 0 36px;
+      font-size: 13px;
+    }
+
+    /* Camp summary tags */
+    .camp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .camp-tag {
+      padding: 10px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.07);
+      color: #e2e8f0;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1080px) {
+      .bio-grid { grid-template-columns: 1fr 1fr; }
+      .club-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .bio-grid { grid-template-columns: 1fr; }
+      .week-grid { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 1080px) {
       .hero-grid,
       .profile-grid,
@@ -700,10 +865,50 @@
           <h2>講師經歷與亮點</h2>
         </div>
         <div class="achievements-grid">
-          <div class="achievement-card">指導學生參與科展與探究競賽並獲佳績</div>
-          <div class="achievement-card">多場教師研習與跨校分享經驗</div>
-          <div class="achievement-card">發展自然 × AI × 探究課程模組</div>
-          <div class="achievement-card">長期推動探究與實作教學</div>
+          <div class="achievement-card">多次指導學生參與科展與探究競賽並獲佳績</div>
+          <div class="achievement-card">長期擔任環境教育週三進修講師</div>
+          <div class="achievement-card">辦理科學遊戲、生態探索、園藝治療等多類型營隊</div>
+          <div class="achievement-card">發展自然 × AI × STEAM 探究課程模組</div>
+          <div class="achievement-card">台南市自然輔導團團員</div>
+          <div class="achievement-card">教師專業社群（綠手指）召集人</div>
+          <div class="achievement-card">科學教育補助計畫召集人</div>
+          <div class="achievement-card">生態解說員、太極拳教練、靈氣治療師</div>
+        </div>
+
+        <div class="bio-grid">
+          <div class="bio-card">
+            <h4>學歷</h4>
+            <ul>
+              <li>清華大學化工系</li>
+              <li>台南大學環境生態研究所</li>
+              <li>亞洲大學休憩管理研究所</li>
+            </ul>
+          </div>
+          <div class="bio-card">
+            <h4>核心經歷</h4>
+            <ul>
+              <li>南科實中自然科任教師</li>
+              <li>自然與生活科技領域召集人</li>
+              <li>台南市自然輔導團團員</li>
+              <li>教師專業社群召集人</li>
+              <li>科學教育補助計畫召集人</li>
+              <li>環境教育週三進修講師</li>
+              <li>科展指導教師</li>
+              <li>嘉義志航・南科實中網管及資訊教師</li>
+            </ul>
+          </div>
+          <div class="bio-card">
+            <h4>多元專長與興趣</h4>
+            <ul>
+              <li>自然科學・教具開發・STEAM</li>
+              <li>生態觀察・導覽解說・環境教育</li>
+              <li>3D 列印・雷雕・AI 融入教學</li>
+              <li>太極拳・瑜伽・靈氣療法</li>
+              <li>園藝治療・探索教育</li>
+              <li>爬山・溯溪・生態探索・書法</li>
+              <li>自然素材手作・靜坐・冥想</li>
+            </ul>
+          </div>
         </div>
 
         <div class="profile-grid">
@@ -714,10 +919,10 @@
               <div class="desc">以自然科學教育為核心，延伸至探究教學、AI 融入、科展研究設計與創客科技，打造兼具專業深度、課堂可行性與跨域視野的教師增能內容。</div>
             </div>
             <div class="quote-box">
-              <div style="font-size:14px;font-weight:800;color:#bbf7d0;">一句話定位</div>
+              <div style="font-size:14px;font-weight:800;color:#bbf7d0;">教育理念</div>
               <strong>
-                讓自然課不只是做實驗，
-                <span>而是學會像科學家一樣思考。</span>
+                期許孩子師法大自然、做中學，
+                <span>在大自然裡發現驚奇，啟發多元智能、自主學習。</span>
               </strong>
             </div>
           </div>
@@ -781,6 +986,276 @@
             <p>結合 3D 列印、雷射雕刻與環境議題，發展具探究性與跨域性的校本特色課程。</p>
             <div class="topic-line"></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light-section">
+      <div class="container">
+        <div class="section-title">
+          <p class="label">WEDNESDAY TRAINING</p>
+          <h2>週三進修講課主題</h2>
+          <div class="desc">超過 55 個主題可依需求選擇，涵蓋室內課程與戶外生態探索，持續更新中。</div>
+        </div>
+
+        <div style="margin-top:32px;">
+          <div class="tags-label indoor">室內課程</div>
+          <div class="tags-grid">
+            <span class="tag-item">1. 園藝治療在教學上的應用</span>
+            <span class="tag-item">2. 多肉植物與空氣鳳梨</span>
+            <span class="tag-item">3. 外來動植物的現況</span>
+            <span class="tag-item">4. 認識校園生態環境</span>
+            <span class="tag-item">5. 生態教室的建置</span>
+            <span class="tag-item">6. 綠色生活地圖</span>
+            <span class="tag-item">7. 校園常見植物</span>
+            <span class="tag-item">8. 中低海拔常見植物</span>
+            <span class="tag-item">9. 都會常見野花野草</span>
+            <span class="tag-item">10. 大自然中的花草遊戲</span>
+            <span class="tag-item">11. 南科園區常見植物</span>
+            <span class="tag-item">12. 環境教育網站介紹</span>
+            <span class="tag-item">13. 山林秘境</span>
+            <span class="tag-item">14. 濱海秘境</span>
+            <span class="tag-item">15. 無痕山林</span>
+            <span class="tag-item">16. 知識與感性兼具的親子生態旅遊</span>
+            <span class="tag-item">17. 培養孩子自然生態觀察</span>
+            <span class="tag-item">18. 在大自然中玩遊戲</span>
+            <span class="tag-item">34. 台灣森林珍貴樹林介紹</span>
+            <span class="tag-item">35. 綠色花圃的設計與建置</span>
+            <span class="tag-item">36. 生態校園（以南科實中為例）</span>
+            <span class="tag-item">37. 生態瓶 DIY</span>
+            <span class="tag-item">38. 幸福種籽學</span>
+            <span class="tag-item">40. 如何指導孩子專題研究</span>
+            <span class="tag-item">41. 科展指導完全攻略</span>
+            <span class="tag-item">42. 常見種子的認識與小森林栽種</span>
+            <span class="tag-item">43. 生態教室的建立</span>
+            <span class="tag-item">44. 落葉堆肥</span>
+            <span class="tag-item">45. 科學童玩</span>
+            <span class="tag-item">46. 漁光島海洋文化與淨灘</span>
+            <span class="tag-item">47. 科學遊戲在教學上的應用</span>
+            <span class="tag-item">49. 南科實中四季賞花情報</span>
+            <span class="tag-item">50. 南科實中四季賞樹情報</span>
+            <span class="tag-item">51. 蕨類與生活</span>
+            <span class="tag-item">52. AI 與科展</span>
+            <span class="tag-item">53. 自然非專研習</span>
+            <span class="tag-item">54. 自然素養導向與評量</span>
+          </div>
+        </div>
+
+        <div style="margin-top:28px;">
+          <div class="tags-label outdoor">戶外生態探索</div>
+          <div class="tags-grid">
+            <span class="tag-item outdoor">19. 觸口自然教育園區</span>
+            <span class="tag-item outdoor">20. 關廟森林公園</span>
+            <span class="tag-item outdoor">21. 龍崎虎形山</span>
+            <span class="tag-item outdoor">22. 關子嶺紅葉公園</span>
+            <span class="tag-item outdoor">23. 南化烏山步道</span>
+            <span class="tag-item outdoor">24. 雙春海濱</span>
+            <span class="tag-item outdoor">25. 好美寮自然生態保護區</span>
+            <span class="tag-item outdoor">26. 田寮月世界地景公園</span>
+            <span class="tag-item outdoor">28. 龍崎牛塘埔</span>
+            <span class="tag-item outdoor">29. 台南巴克禮公園</span>
+            <span class="tag-item outdoor">30. 鰲鼓濕地</span>
+            <span class="tag-item outdoor">31. 東山嵌頭山</span>
+            <span class="tag-item outdoor">32. 南化龍麟山</span>
+            <span class="tag-item outdoor">33. 南科園區滯洪池</span>
+            <span class="tag-item outdoor">34. 走馬瀨農場－獨角仙</span>
+            <span class="tag-item outdoor">48. 台南的生態公園</span>
+            <span class="tag-item outdoor">55. 玉山國家公園</span>
+          </div>
+        </div>
+
+        <p style="margin-top:20px;font-size:14px;color:#94a3b8;font-style:italic;">持續增加中⋯⋯</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <small>PROGRAMS</small>
+          <h2>夏令營、冬令營與課後社團</h2>
+          <div class="desc">以下課程可自由組裝，視學生人數、課程天數等彈性調整。點選各社團可展開詳細週課表。</div>
+        </div>
+
+        <div style="margin-top:36px;">
+          <div style="font-size:13px;font-weight:800;letter-spacing:.18em;color:#86efac;text-transform:uppercase;margin-bottom:16px;">夏令營 / 冬令營主要內容</div>
+          <div class="camp-tags">
+            <span class="camp-tag">科學探究與遊戲</span>
+            <span class="camp-tag">生態觀察・攝影・自然筆記</span>
+            <span class="camp-tag">專題研究</span>
+            <span class="camp-tag">探索教育</span>
+            <span class="camp-tag">潛能開發</span>
+            <span class="camp-tag">羽球・桌球・籃球</span>
+            <span class="camp-tag">太極拳・養生武術</span>
+            <span class="camp-tag">綠手指</span>
+            <span class="camp-tag">工藝創客</span>
+          </div>
+        </div>
+
+        <div class="club-grid">
+          <details class="club-card">
+            <summary>
+              <div class="sum-left">
+                <div class="topic-tag" style="background:#ecfdf5;color:#047857;">課後社團一</div>
+                <h3>自然科學</h3>
+              </div>
+              <span class="sum-arrow">▼</span>
+            </summary>
+            <div class="club-content">
+              <p style="margin:16px 0 8px;font-size:14px;color:#64748b;">自然與科學各 9 堂課交叉・共 18 週</p>
+              <div class="week-grid">
+                <div class="week-item"><span class="week-num">W01</span><span>顯微鏡下的世界</span></div>
+                <div class="week-item"><span class="week-num">W02</span><span>自走玩具一</span></div>
+                <div class="week-item"><span class="week-num">W03</span><span>校園植物巡禮</span></div>
+                <div class="week-item"><span class="week-num">W04</span><span>奈米現象</span></div>
+                <div class="week-item"><span class="week-num">W05</span><span>種子手作</span></div>
+                <div class="week-item"><span class="week-num">W06</span><span>降落傘</span></div>
+                <div class="week-item"><span class="week-num">W07</span><span>種子小森林</span></div>
+                <div class="week-item"><span class="week-num">W08</span><span>自走玩具二</span></div>
+                <div class="week-item"><span class="week-num">W09</span><span>生態球</span></div>
+                <div class="week-item"><span class="week-num">W10</span><span>迴力鏢</span></div>
+                <div class="week-item"><span class="week-num">W11</span><span>葉脈書籤</span></div>
+                <div class="week-item"><span class="week-num">W12</span><span>飛最遠的紙飛機</span></div>
+                <div class="week-item"><span class="week-num">W13</span><span>染搥</span></div>
+                <div class="week-item"><span class="week-num">W14</span><span>仿生獸一</span></div>
+                <div class="week-item"><span class="week-num">W15</span><span>香草的天空</span></div>
+                <div class="week-item"><span class="week-num">W16</span><span>仿生獸二</span></div>
+                <div class="week-item"><span class="week-num">W17</span><span>多肉植物</span></div>
+                <div class="week-item"><span class="week-num">W18</span><span>成果展</span></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="club-card">
+            <summary>
+              <div class="sum-left">
+                <div class="topic-tag" style="background:#ecfdf5;color:#047857;">課後社團二</div>
+                <h3>自然生態探索</h3>
+              </div>
+              <span class="sum-arrow">▼</span>
+            </summary>
+            <div class="club-content">
+              <p style="margin:16px 0 8px;font-size:14px;color:#64748b;">探索大自然與生態觀察・共 18 週</p>
+              <div class="week-grid">
+                <div class="week-item"><span class="week-num">W01</span><span>有趣的根莖葉與花草遊戲一</span></div>
+                <div class="week-item"><span class="week-num">W02</span><span>校園植物觀察</span></div>
+                <div class="week-item"><span class="week-num">W03</span><span>校園裡的種子</span></div>
+                <div class="week-item"><span class="week-num">W04</span><span>有趣的根莖葉與花草遊戲二</span></div>
+                <div class="week-item"><span class="week-num">W05</span><span>槌染</span></div>
+                <div class="week-item"><span class="week-num">W06</span><span>葉脈拓印</span></div>
+                <div class="week-item"><span class="week-num">W07</span><span>葉脈書籤</span></div>
+                <div class="week-item"><span class="week-num">W08</span><span>種子彩繪</span></div>
+                <div class="week-item"><span class="week-num">W09</span><span>種子拚貼</span></div>
+                <div class="week-item"><span class="week-num">W10</span><span>校園裡的昆蟲</span></div>
+                <div class="week-item"><span class="week-num">W11</span><span>會香的植物</span></div>
+                <div class="week-item"><span class="week-num">W12</span><span>微觀世界</span></div>
+                <div class="week-item"><span class="week-num">W13</span><span>校園裡的爬蟲類</span></div>
+                <div class="week-item"><span class="week-num">W14</span><span>自然筆記</span></div>
+                <div class="week-item"><span class="week-num">W15</span><span>種子手作一</span></div>
+                <div class="week-item"><span class="week-num">W16</span><span>種子手作二</span></div>
+                <div class="week-item"><span class="week-num">W17</span><span>有趣的根莖葉與花草遊戲三</span></div>
+                <div class="week-item"><span class="week-num">W18</span><span>成果發表</span></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="club-card">
+            <summary>
+              <div class="sum-left">
+                <div class="topic-tag" style="background:#ecfdf5;color:#047857;">課後社團三</div>
+                <h3>科學遊戲社（物理・化學）</h3>
+              </div>
+              <span class="sum-arrow">▼</span>
+            </summary>
+            <div class="club-content">
+              <p style="margin:16px 0 8px;font-size:14px;color:#64748b;">自然科學遊戲：物理、化學・共 18 週</p>
+              <div class="week-grid">
+                <div class="week-item"><span class="week-num">W01</span><span>顯微鏡下的世界</span></div>
+                <div class="week-item"><span class="week-num">W02</span><span>自走玩具一</span></div>
+                <div class="week-item"><span class="week-num">W03</span><span>自走玩具二</span></div>
+                <div class="week-item"><span class="week-num">W04</span><span>吹乒乓球</span></div>
+                <div class="week-item"><span class="week-num">W05</span><span>紙迴力鏢</span></div>
+                <div class="week-item"><span class="week-num">W06</span><span>橡皮筋遊戲</span></div>
+                <div class="week-item"><span class="week-num">W07</span><span>空氣砲</span></div>
+                <div class="week-item"><span class="week-num">W08</span><span>火山爆發</span></div>
+                <div class="week-item"><span class="week-num">W09</span><span>猴子往上爬</span></div>
+                <div class="week-item"><span class="week-num">W10</span><span>橡皮筋動力車</span></div>
+                <div class="week-item"><span class="week-num">W11</span><span>迴力紙杯（流體力學）</span></div>
+                <div class="week-item"><span class="week-num">W12</span><span>寶特瓶風車</span></div>
+                <div class="week-item"><span class="week-num">W13</span><span>空氣壓力噴泉</span></div>
+                <div class="week-item"><span class="week-num">W14</span><span>泡泡噴泉</span></div>
+                <div class="week-item"><span class="week-num">W15</span><span>自製萬花筒</span></div>
+                <div class="week-item"><span class="week-num">W16</span><span>摺紙平衡鷹、平衡鳥</span></div>
+                <div class="week-item"><span class="week-num">W17</span><span>紙飛機永不落地</span></div>
+                <div class="week-item"><span class="week-num">W18</span><span>迴旋飛機</span></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="club-card">
+            <summary>
+              <div class="sum-left">
+                <div class="topic-tag" style="background:#ecfdf5;color:#047857;">課後社團四</div>
+                <h3>科學遊戲社（進階）</h3>
+              </div>
+              <span class="sum-arrow">▼</span>
+            </summary>
+            <div class="club-content">
+              <p style="margin:16px 0 8px;font-size:14px;color:#64748b;">進階科學遊戲・共 18 週</p>
+              <div class="week-grid">
+                <div class="week-item"><span class="week-num">W01</span><span>平衡鳥</span></div>
+                <div class="week-item"><span class="week-num">W02</span><span>喝水鳥</span></div>
+                <div class="week-item"><span class="week-num">W03</span><span>一飛沖天的壓力飛箭</span></div>
+                <div class="week-item"><span class="week-num">W04</span><span>吹箭</span></div>
+                <div class="week-item"><span class="week-num">W05</span><span>聲音蛇</span></div>
+                <div class="week-item"><span class="week-num">W06</span><span>靜電魔術蛇</span></div>
+                <div class="week-item"><span class="week-num">W07</span><span>魔法跳豆</span></div>
+                <div class="week-item"><span class="week-num">W08</span><span>無動力自走小熊</span></div>
+                <div class="week-item"><span class="week-num">W09</span><span>吸管卡祖笛</span></div>
+                <div class="week-item"><span class="week-num">W10</span><span>無字天書</span></div>
+                <div class="week-item"><span class="week-num">W11</span><span>有碘不一樣</span></div>
+                <div class="week-item"><span class="week-num">W12</span><span>單極馬達</span></div>
+                <div class="week-item"><span class="week-num">W13</span><span>奈米現象</span></div>
+                <div class="week-item"><span class="week-num">W14</span><span>奈米實驗</span></div>
+                <div class="week-item"><span class="week-num">W15</span><span>虹橋</span></div>
+                <div class="week-item"><span class="week-num">W16</span><span>靜電遊戲</span></div>
+                <div class="week-item"><span class="week-num">W17</span><span>火山爆發</span></div>
+                <div class="week-item"><span class="week-num">W18</span><span>電磁火車</span></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="club-card" style="grid-column: 1 / -1;">
+            <summary>
+              <div class="sum-left">
+                <div class="topic-tag" style="background:#ecfdf5;color:#047857;">課後社團五</div>
+                <h3>科學童玩</h3>
+              </div>
+              <span class="sum-arrow">▼</span>
+            </summary>
+            <div class="club-content">
+              <p style="margin:16px 0 8px;font-size:14px;color:#64748b;">科學童玩製作・共 18 週</p>
+              <div class="week-grid">
+                <div class="week-item"><span class="week-num">W01</span><span>寶特瓶風車</span></div>
+                <div class="week-item"><span class="week-num">W02</span><span>降落傘</span></div>
+                <div class="week-item"><span class="week-num">W03</span><span>自走玩具一</span></div>
+                <div class="week-item"><span class="week-num">W04</span><span>葉笛</span></div>
+                <div class="week-item"><span class="week-num">W05</span><span>紙迴力鏢</span></div>
+                <div class="week-item"><span class="week-num">W06</span><span>橡皮筋遊戲</span></div>
+                <div class="week-item"><span class="week-num">W07</span><span>空氣砲</span></div>
+                <div class="week-item"><span class="week-num">W08</span><span>彈弓</span></div>
+                <div class="week-item"><span class="week-num">W09</span><span>猴子往上爬</span></div>
+                <div class="week-item"><span class="week-num">W10</span><span>橡皮筋動力車</span></div>
+                <div class="week-item"><span class="week-num">W11</span><span>迴力紙杯（流體力學）</span></div>
+                <div class="week-item"><span class="week-num">W12</span><span>寶特瓶風車</span></div>
+                <div class="week-item"><span class="week-num">W13</span><span>空氣壓力噴泉</span></div>
+                <div class="week-item"><span class="week-num">W14</span><span>陀螺</span></div>
+                <div class="week-item"><span class="week-num">W15</span><span>自製萬花筒</span></div>
+                <div class="week-item"><span class="week-num">W16</span><span>摺紙平衡鷹、平衡鳥</span></div>
+                <div class="week-item"><span class="week-num">W17</span><span>紙飛機永不落地</span></div>
+                <div class="week-item"><span class="week-num">W18</span><span>迴旋飛機</span></div>
+              </div>
+            </div>
+          </details>
         </div>
       </div>
     </section>
