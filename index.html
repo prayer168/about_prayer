@@ -738,13 +738,54 @@
       font-weight: 700;
     }
 
+    /* Ecology domain cards */
+    .eco-domains {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 44px;
+    }
+    .eco-domain-card {
+      padding: 26px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      transition: transform .25s ease, background .25s ease;
+    }
+    .eco-domain-card:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.09);
+    }
+    .eco-icon { font-size: 36px; margin-bottom: 14px; }
+    .eco-domain-card h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      color: #86efac;
+    }
+    .eco-domain-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    .eco-camps-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 28px;
+    }
+    .eco-camp-card { padding: 28px; }
+
     @media (max-width: 1080px) {
       .bio-grid { grid-template-columns: 1fr 1fr; }
       .club-grid { grid-template-columns: 1fr; }
+      .eco-domains { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 720px) {
       .bio-grid { grid-template-columns: 1fr; }
       .week-grid { grid-template-columns: 1fr; }
+      .eco-domains { grid-template-columns: 1fr; }
+      .eco-camps-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 1080px) {
@@ -805,6 +846,7 @@
       <nav class="nav-links">
         <a href="#profile">講師定位</a>
         <a href="#courses">課程主題</a>
+        <a href="#ecology">生態專長</a>
         <a href="#contact" class="cta">邀課資訊</a>
       </nav>
     </div>
@@ -986,6 +1028,62 @@
             <p>結合 3D 列印、雷射雕刻與環境議題，發展具探究性與跨域性的校本特色課程。</p>
             <div class="topic-line"></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecology" class="section">
+      <div class="container">
+        <div class="section-title">
+          <small>ECOLOGY &amp; ENVIRONMENT</small>
+          <h2>環境生態專長與課程特色</h2>
+          <div class="desc">以台南在地生態為出發點，融合生態觀察、環境教育與自然體驗，帶領學生從感官探索走向科學思考，做中學、玩中學。</div>
+        </div>
+
+        <div class="eco-domains">
+          <div class="eco-domain-card">
+            <div class="eco-icon">🌿</div>
+            <h3>植物生態</h3>
+            <p>校園植物、種子認識、蕨類、多肉植物、香草植物、中低海拔植物、南科園區植物、四季賞花賞樹、小森林栽種</p>
+          </div>
+          <div class="eco-domain-card">
+            <div class="eco-icon">🦋</div>
+            <h3>動物與昆蟲</h3>
+            <p>校園昆蟲觀察、爬蟲類記錄、獨角仙與甲蟲、外來入侵種現況、生態棲地調查、生態攝影紀錄</p>
+          </div>
+          <div class="eco-domain-card">
+            <div class="eco-icon">🌏</div>
+            <h3>環境教育</h3>
+            <p>無痕山林、海岸生態與淨灘、濕地保育、生態校園建置、綠色生活地圖、親子生態旅遊設計、環境議題探討</p>
+          </div>
+          <div class="eco-domain-card">
+            <div class="eco-icon">✏️</div>
+            <h3>自然體驗與創作</h3>
+            <p>自然筆記、生態攝影、種子手作、葉脈拓印、槌染、生態瓶 DIY、落葉堆肥、園藝治療綠手指</p>
+          </div>
+        </div>
+
+        <div class="eco-camps-grid">
+          <div class="glass eco-camp-card">
+            <div style="font-size:12px;font-weight:800;letter-spacing:.18em;color:#86efac;text-transform:uppercase;margin-bottom:18px;">曾辦理之生態類營隊</div>
+            <div class="feature-list">
+              <div class="feature-item"><span class="mini-dot"></span><div>環境生態探索夏令營・冬令營</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>生態攝影冬令營</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>園藝治療綠手指夏令營</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>科學遊戲夏令營・冬令營・課後社團</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>綜合領域夏令營・冬令營</div></div>
+            </div>
+          </div>
+          <div class="glass eco-camp-card">
+            <div style="font-size:12px;font-weight:800;letter-spacing:.18em;color:#86efac;text-transform:uppercase;margin-bottom:18px;">在地生態場域與身份</div>
+            <div class="feature-list">
+              <div class="feature-item"><span class="mini-dot"></span><div>台南市自然輔導團成員</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>環境生態導覽解說員</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>台南 17 處以上戶外生態場域教學經驗</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>綠手指教師專業社群召集人</div></div>
+              <div class="feature-item"><span class="mini-dot"></span><div>生態校園建置推動者</div></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
